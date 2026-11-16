@@ -1,0 +1,7 @@
+# Proprietary vendor content — preserved locally, NOT redistributed.
+# Rationale: source/documentation/legal-and-scope.md
+# Reproducible from the signed binaries via the offsets in MANIFEST.md.
+frontend/assets/index-COO2fUbz.js
+frontend/assets/index-CvNvudRa.css
+frontend/index.html
+strings/*.txt
