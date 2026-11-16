@@ -21,12 +21,18 @@ Reverse-engineering and architecture research on the **DigiExam for Windows** cl
 
 ```
 source/
-├── analysis/                 # Analytical reports (this phase + phase 1)
+├── analysis/                 # Analytical reports (phases 1 + 2)
 │   ├── 01-executable-provenance.md
 │   ├── 02-platform-identification.md
 │   ├── 03-component-architecture.md
 │   ├── 04-frontend-ipc-surface.md
-│   └── 05-tooling-and-reproducibility.md
+│   ├── 05-tooling-and-reproducibility.md
+│   ├── 06-rust-architecture.md        # phase 2
+│   ├── 07-tauri-ipc.md                # phase 2
+│   ├── 08-frontend-architecture.md    # phase 2
+│   ├── 09-windows-integration.md      # phase 2
+│   ├── 10-backend-protocols.md        # phase 2
+│   └── 11-tooling-and-methodology.md  # phase 2 (tool/MCP usage log)
 ├── documentation/
 │   ├── methodology.md                # Methods, tools, verification chain
 │   ├── legal-and-scope.md            # Scope, ethics, copyright handling
