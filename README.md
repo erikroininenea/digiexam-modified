@@ -21,7 +21,7 @@ Reverse-engineering and architecture research on the **DigiExam for Windows** cl
 
 ```
 source/
-├── analysis/                 # Analytical reports (phases 1 + 2)
+├── analysis/                 # Analytical reports (phases 1-3)
 │   ├── 01-executable-provenance.md
 │   ├── 02-platform-identification.md
 │   ├── 03-component-architecture.md
@@ -32,11 +32,17 @@ source/
 │   ├── 08-frontend-architecture.md    # phase 2
 │   ├── 09-windows-integration.md      # phase 2
 │   ├── 10-backend-protocols.md        # phase 2
-│   └── 11-tooling-and-methodology.md  # phase 2 (tool/MCP usage log)
+│   ├── 11-tooling-and-methodology.md  # phase 2 (tool/MCP usage log)
+│   ├── 12-protobuf-schemas.md         # phase 3 (wire-format interface reconstruction)
+│   ├── 13-lockdown-architecture-boundaries.md  # phase 3 (boundary model)
+│   └── 14-lockdown-raw-evidence.md    # phase 3 (byte-exact component locations + raw strings)
 ├── documentation/
 │   ├── methodology.md                # Methods, tools, verification chain
 │   ├── legal-and-scope.md            # Scope, ethics, copyright handling
 │   └── digiexam_lockdown_rapport.md  # Phase-1 report (Swedish, preserved verbatim)
+├── extraction/
+│   ├── TOOLING-SNIPPETS.md   # Project-authored read-only analysis scripts
+│   └── RECOVERY-STATUS.md    # Phase-3 extraction status (partially cancelled)
 └── recovered-assets/
     ├── MANIFEST.md           # Provenance, hashes, extraction method
     ├── frontend/             # Preserved locally; large proprietary files NOT pushed
