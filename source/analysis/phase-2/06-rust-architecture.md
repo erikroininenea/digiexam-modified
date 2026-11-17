@@ -1,6 +1,6 @@
 # 06 — Rust architecture
 
-**Phase:** 2 (2026-11-16) · **Method:** read-only string/offset analysis by research agent A, cross-checked by review agent (see [`11-tooling-and-methodology.md`](11-tooling-and-methodology.md)). Labels: **VERIFIED** (byte-exact at cited offset), **STRONGLY INFERRED**, **UNVERIFIED**. Binary hashes in [`01-executable-provenance.md`](01-executable-provenance.md). No binary was executed or modified.
+**Phase:** 2 (2026-11-16) · **Method:** read-only string/offset analysis by research agent A, cross-checked by review agent (see [`11-tooling-and-methodology.md`](11-tooling-and-methodology.md)). Labels: **VERIFIED** (byte-exact at cited offset), **STRONGLY INFERRED**, **UNVERIFIED**. Binary hashes in [`01-executable-provenance.md`](../phase-1/01-executable-provenance.md). No binary was executed or modified.
 
 ## 1. Workspace topology — VERIFIED
 

@@ -7,17 +7,17 @@ no recoverable source code; the only text-form artifacts are embedded strings an
 compiled machine code. This document publishes the string evidence with byte-exact
 offsets. Machine-code dumps and any enforcement internals (registry values, hotkey
 lists, whitelist contents) are intentionally **not** reproduced — see
-[`../documentation/legal-and-scope.md`](../documentation/legal-and-scope.md) and
+[`../documentation/legal-and-scope.md`](../../documentation/legal-and-scope.md) and
 [`13-lockdown-architecture-boundaries.md`](13-lockdown-architecture-boundaries.md).
 
 **Labels:** every offset below is **VERIFIED** (byte-exact literal match at the cited
 raw file offset, re-verified 2026-11-16 against the SHA-256-hashed binaries in
-[`../recovered-assets/MANIFEST.md`](../recovered-assets/MANIFEST.md)). Offsets are
+[`../recovered-assets/MANIFEST.md`](../../recovered-assets/MANIFEST.md)). Offsets are
 decimal-file offsets in the shipped binaries (not RVA/VA; they are version-specific
 to 26.4.7 and will differ in other builds).
 
 **Method:** raw Latin-1 byte search over the full binaries (script in
-[`../extraction/TOOLING-SNIPPETS.md`](../extraction/TOOLING-SNIPPETS.md) §8). Where a
+[`../extraction/TOOLING-SNIPPETS.md`](../../extraction/TOOLING-SNIPPETS.md) §8). Where a
 literal occurs many times (Rust panic-location metadata repeats per call site), the
 table shows the first offset + occurrence count.
 
@@ -254,8 +254,8 @@ disconnect/cleanup pair):
 ## 5. Reproduction
 
 Reproduce every offset with the read-only scan script in
-[`../extraction/TOOLING-SNIPPETS.md`](../extraction/TOOLING-SNIPPETS.md) §8 against
-the hashed binaries in [`../recovered-assets/MANIFEST.md`](../recovered-assets/MANIFEST.md):
+[`../extraction/TOOLING-SNIPPETS.md`](../../extraction/TOOLING-SNIPPETS.md) §8 against
+the hashed binaries in [`../recovered-assets/MANIFEST.md`](../../recovered-assets/MANIFEST.md):
 
 - `digiexam.exe` — SHA-256 `047BA68F640F…54E85491` (44,482,696 B)
 - `service.exe` — SHA-256 `3EE5A430D6BF…96554D907E` (18,614,440 B)

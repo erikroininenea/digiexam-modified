@@ -30,7 +30,7 @@ interfaces are **layer 2** — there is no Electron/Node process boundary anywhe
   logger commands (`send_debug/trace/info/warn/error`), token commands.
 - Plugin commands: `plugin:lockdown-lite|run_all/stop_all/rollback/query_windows_service_status/...`,
   `plugin:webview-manager|open_webview/...` (full registry in
-  [`04-frontend-ipc-surface.md`](04-frontend-ipc-surface.md)).
+  [`04-frontend-ipc-surface.md`](../phase-1/04-frontend-ipc-surface.md)).
 - Rust→frontend events: `lockdown_started`, `lockdown_stopped`, `critical_lockdown_error`,
   `action_required_error`, `abort`, `network_ping`, permission checks, `battery_level`,
   `available_disks`.
@@ -49,7 +49,7 @@ interfaces are **layer 2** — there is no Electron/Node process boundary anywhe
 ≈33,070,000–33,076,000) with exactly the official identifier grammar (`allow-…` /
 `deny-…`, plugin command names), covering core window/webview commands, lockdown-lite,
 io, battery, keyboard-layout, updater (details in
-[`04-frontend-ipc-surface.md`](04-frontend-ipc-surface.md) §4).
+[`04-frontend-ipc-surface.md`](../phase-1/04-frontend-ipc-surface.md) §4).
 
 **Interpretation (STRONGLY INFERRED):** DigiExam uses the standard v2 ACL mechanism;
 the table is the compiled form of capabilities/permission files. Which commands the

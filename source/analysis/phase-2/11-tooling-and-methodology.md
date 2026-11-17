@@ -14,7 +14,7 @@ calls made in this session (2026-11-16).
 **REA MCP server status:** **NOT REGISTERED** in this environment (catalog search: no
 `rea` namespace). Not fabricated, not assumed — verified by catalog inspection. The REA
 *CLI fallback* was used in phase 1 (documented in
-[`05-tooling-and-reproducibility.md`](05-tooling-and-reproducibility.md)); in phase 2 the
+[`05-tooling-and-reproducibility.md`](../phase-1/05-tooling-and-reproducibility.md)); in phase 2 the
 "REA agents" requirement (delegated independent research + review + cross-checking) was
 implemented through the harness **subagent** tool (below), with REA's evidence-labeling
 methodology applied to every report.
@@ -58,7 +58,7 @@ labels + contradictions section). Reports preserved in `%TEMP%\opencode\phase2\{
   "no match" several times) — use per-file grep plus raw byte scans for binary literals.
 - PowerShell 5.1: no `??` operator; ScriptBlock `.Invoke(...).Count` returns the wrapper
   count, not the match count (phase-2 marker-scan pitfall, see
-  [`05-tooling-and-reproducibility.md`](05-tooling-and-reproducibility.md)).
+  [`05-tooling-and-reproducibility.md`](../phase-1/05-tooling-and-reproducibility.md)).
 - Node `toString('latin1')` returns a *string* — use `substring`, not `subarray`.
 - The 10.5 MB minified bundle defeats whole-file JS analyzers (phase-1 REA CLI runs);
   targeted regex-with-offset scans are the effective tool at this size.

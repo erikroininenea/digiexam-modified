@@ -104,7 +104,7 @@ console.log(at(28200792, 28) === 'digiexam_toolbox_service_ipc'); // true
 
 Enumerates every occurrence of a literal (Rust panic-location metadata repeats per
 call site) and walks prefix regexes to list complete module paths — produces the raw
-offsets published in [`../analysis/14-lockdown-raw-evidence.md`](../analysis/14-lockdown-raw-evidence.md):
+offsets published in [`../analysis/phase-3/14-lockdown-raw-evidence.md`](../analysis/phase-3/14-lockdown-raw-evidence.md):
 
 ```js
 const fs = require('fs');

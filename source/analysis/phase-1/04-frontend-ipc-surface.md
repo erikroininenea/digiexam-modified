@@ -1,7 +1,7 @@
 # 04 — Frontend IPC surface (recovered bundle analysis)
 
 **Source:** `/assets/index-COO2fUbz.js` (Vite/esbuild bundle, 10,547,069 B), recovered
-from `digiexam.exe` — see [`../recovered-assets/MANIFEST.md`](../recovered-assets/MANIFEST.md).
+from `digiexam.exe` — see [`../recovered-assets/MANIFEST.md`](../../recovered-assets/MANIFEST.md).
 All items below are **observations from static text of the bundle**; no application was
 executed.
 

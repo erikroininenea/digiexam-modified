@@ -17,7 +17,7 @@ Two evidence classes with different fidelity:
 | toolbox proxy strings | `.../strings_toolbox.txt` | *older* schema iteration of the lockdown IPC vocabulary | line no. + raw offset |
 | Binaries (offset pinning, read-only) | `D:\Digiexam\{digiexam,service,toolbox-ipc-proxy}.exe` | raw file offsets for key strings | `0x…` offsets below |
 
-Method-path convention (fully-qualified `/package.Service/Method`) follows the official gRPC HTTP/2 protocol; see [`10-backend-protocols.md`](10-backend-protocols.md) for the transport analysis.
+Method-path convention (fully-qualified `/package.Service/Method`) follows the official gRPC HTTP/2 protocol; see [`10-backend-protocols.md`](../phase-2/10-backend-protocols.md) for the transport analysis.
 
 ## 2. Service & method inventory
 
@@ -2641,4 +2641,4 @@ Upload handshake (protobuf, §3 `assignment.snapshot.v1`): `CreateLockdownSystem
 - Frontend bundle: `source/recovered-assets/frontend/assets/index-COO2fUbz.js` (char offsets quoted inline).
 - String dumps: `source/recovered-assets/strings/strings_digiexam.txt` (L146156–146157, L269077, L416064–416101), `strings_service.txt` (L146156–146157, L146665–146669, L147059–147114, L147222, L147634–147646, L154139–154149), `strings_toolbox.txt` (L12749–12759, L13372–13377).
 - Binaries (read-only offset pinning): `D:\Digiexam\digiexam.exe`, `D:\Digiexam\service.exe`, `D:\Digiexam\toolbox-ipc-proxy.exe` (raw offsets quoted inline).
-- Related: [`10-backend-protocols.md`](10-backend-protocols.md) (transports, endpoints), [`08-frontend-architecture.md`](08-frontend-architecture.md) (bundle provenance), [`09-windows-integration.md`](09-windows-integration.md) (toolbox topology).
+- Related: [`10-backend-protocols.md`](../phase-2/10-backend-protocols.md) (transports, endpoints), [`08-frontend-architecture.md`](../phase-2/08-frontend-architecture.md) (bundle provenance), [`09-windows-integration.md`](../phase-2/09-windows-integration.md) (toolbox topology).

@@ -29,7 +29,7 @@ official gRPC HTTP/2 protocol requires — fully-qualified `/package.Service/Met
 | `intserver.service.v1.IntServerService/Ping` | 0x01B2F0A8 |
 | `opentelemetry.proto.collector.{logs,trace}.v1.*Service/Export` | 0x020313C8 |
 
-**Correction (phase-3 schema reconstruction, see [`12-protobuf-schemas.md`](12-protobuf-schemas.md) §5):**
+**Correction (phase-3 schema reconstruction, see [`12-protobuf-schemas.md`](../phase-3/12-protobuf-schemas.md) §5):**
 `LockdownStart`, `LockdownStartWithDefinitions`, `LockdownStop` and
 `RollbackOperations` — listed in phase 1 as `LockdownService` methods — have **no
 method-path strings in any binary**; they are **native IPC commands**
@@ -50,7 +50,7 @@ Protobuf packages: `lockdown.{parameter,opplatform,opdefinition,lifecycle}.v1` �
   (`StandardLogin`, `LoginWithCode`, `RefreshToken`), exams (`GetActiveExams`,
   `GetExamDetails`, `StartOnlineExam`, `StartUSBExam`, `HandInExam`, `RestoreExam`),
   Q&A (`GetQuestions`, `GetAnswers`, `SaveTextualAnswer` (client-streaming —
-  corrected in [`12-protobuf-schemas.md`](12-protobuf-schemas.md) §5),
+  corrected in [`12-protobuf-schemas.md`](../phase-3/12-protobuf-schemas.md) §5),
   `SaveTextualAnswerUnary`), proctoring (`GenerateProctoringToken`,
   `CheckProctoringLicenses`), connectivity (`Get/SetConnectivityStatus`),
   snapshot upload, file up/download.

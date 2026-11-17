@@ -21,28 +21,31 @@ Reverse-engineering and architecture research on the **DigiExam for Windows** cl
 
 ```
 source/
-├── analysis/                 # Analytical reports (phases 1-3)
-│   ├── 01-executable-provenance.md
-│   ├── 02-platform-identification.md
-│   ├── 03-component-architecture.md
-│   ├── 04-frontend-ipc-surface.md
-│   ├── 05-tooling-and-reproducibility.md
-│   ├── 06-rust-architecture.md        # phase 2
-│   ├── 07-tauri-ipc.md                # phase 2
-│   ├── 08-frontend-architecture.md    # phase 2
-│   ├── 09-windows-integration.md      # phase 2
-│   ├── 10-backend-protocols.md        # phase 2
-│   ├── 11-tooling-and-methodology.md  # phase 2 (tool/MCP usage log)
-│   ├── 12-protobuf-schemas.md         # phase 3 (wire-format interface reconstruction)
-│   ├── 13-lockdown-architecture-boundaries.md  # phase 3 (boundary model)
-│   └── 14-lockdown-raw-evidence.md    # phase 3 (byte-exact component locations + raw strings)
+├── analysis/                     # Analytical reports, grouped by phase
+│   ├── phase-1/                  # Fundamentals (2026-11-15)
+│   │   ├── 01-executable-provenance.md
+│   │   ├── 02-platform-identification.md
+│   │   ├── 03-component-architecture.md
+│   │   ├── 04-frontend-ipc-surface.md
+│   │   └── 05-tooling-and-reproducibility.md
+│   ├── phase-2/                  # Delegated deep-dive (2026-11-16)
+│   │   ├── 06-rust-architecture.md
+│   │   ├── 07-tauri-ipc.md
+│   │   ├── 08-frontend-architecture.md
+│   │   ├── 09-windows-integration.md
+│   │   ├── 10-backend-protocols.md
+│   │   └── 11-tooling-and-methodology.md   # tool/MCP usage log
+│   └── phase-3/                  # Schemas, boundaries, raw evidence (2026-11-16)
+│       ├── 12-protobuf-schemas.md
+│       ├── 13-lockdown-architecture-boundaries.md
+│       └── 14-lockdown-raw-evidence.md     # byte-exact component locations
 ├── documentation/
 │   ├── methodology.md                # Methods, tools, verification chain
 │   ├── legal-and-scope.md            # Scope, ethics, copyright handling
 │   └── digiexam_lockdown_rapport.md  # Phase-1 report (Swedish, preserved verbatim)
 ├── extraction/
-│   ├── TOOLING-SNIPPETS.md   # Project-authored read-only analysis scripts
-│   └── RECOVERY-STATUS.md    # Phase-3 extraction status (partially cancelled)
+│   ├── TOOLING-SNIPPETS.md       # Project-authored read-only analysis scripts
+│   └── RECOVERY-STATUS.md        # Phase-3 extraction status (partially cancelled)
 └── recovered-assets/
     ├── MANIFEST.md           # Provenance, hashes, extraction method
     ├── frontend/             # Preserved locally; large proprietary files NOT pushed
@@ -66,4 +69,4 @@ copyrighted material. Remove the exclusions only if you hold permission to redis
 | `service.exe` | `3EE5A430D6BF4002` | `D:\Digiexam\service.exe` |
 | `toolbox-ipc-proxy.exe` | `05674FC5BBEF51E3` | `D:\Digiexam\toolbox-ipc-proxy.exe` |
 
-Full hashes: [`source/analysis/01-executable-provenance.md`](source/analysis/01-executable-provenance.md).
+Full hashes: [`source/analysis/phase-1/01-executable-provenance.md`](source/analysis/phase-1/01-executable-provenance.md).

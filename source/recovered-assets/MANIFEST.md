@@ -26,7 +26,7 @@ located by offset scanning + successful `zlib.brotliDecompressSync` validation.
 
 **Verification:** all three were re-extracted fresh from the signed binary in phase 2
 and hash-matched byte-for-byte. Reproduction script:
-[`../analysis/05-tooling-and-reproducibility.md`](../analysis/05-tooling-and-reproducibility.md).
+[`../analysis/phase-1/05-tooling-and-reproducibility.md`](../analysis/phase-1/05-tooling-and-reproducibility.md).
 
 **Status of recovered code:** build artifacts recovered from a release binary. They
 are *not* DigiExam's original source code, and no claim is made otherwise. Third-party
@@ -51,5 +51,5 @@ SHA-256 `DBC9C614798295886DBF643D17F990BCBC59BEB0BD0933D6B37244B2DD53B597`.
 Phase-1 helper scripts and REA outputs lived in `%TEMP%\opencode\`
 (`brotli_scan.js`, `invoke_scan.js`, `acl_extract.js`, `proctor_scan.js`,
 `rea_result.json`, `rea_bundle`, …). They are documented for reproducibility in
-[`../analysis/05-tooling-and-reproducibility.md`](../analysis/05-tooling-and-reproducibility.md);
+[`../analysis/phase-1/05-tooling-and-reproducibility.md`](../analysis/phase-1/05-tooling-and-reproducibility.md);
 none are published.

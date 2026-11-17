@@ -2,7 +2,7 @@
 
 **Target:** DigiExam for Windows v26.4.7 (`digiexam.exe`, `service.exe`, `toolbox-ipc-proxy.exe`).
 **Method:** read-only static analysis. This document synthesizes the phase-1 report
-([`../documentation/digiexam_lockdown_rapport.md`](../documentation/digiexam_lockdown_rapport.md), Swedish)
+([`../documentation/digiexam_lockdown_rapport.md`](../../documentation/digiexam_lockdown_rapport.md), Swedish)
 and phase-2 docs 03/04/06/07/09/10 into a single **boundary model**, extended with new
 string-dump observations from this pass (cited as `strings_*.txt:line`). No binary was
 executed or modified. **Descriptive architecture only — no bypass, weakening or

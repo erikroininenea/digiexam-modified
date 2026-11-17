@@ -3,9 +3,9 @@
 **Scope note:** this document describes architecture, interfaces and *observable*
 behavior as recorded by read-only static analysis. It intentionally does **not**
 document any technique for weakening or bypassing the lockdown — see
-[`../documentation/legal-and-scope.md`](../documentation/legal-and-scope.md).
+[`../documentation/legal-and-scope.md`](../../documentation/legal-and-scope.md).
 Fine-grained detail (operation catalog, registry values, hook mechanisms) is preserved
-in the phase-1 report: [`../documentation/digiexam_lockdown_rapport.md`](../documentation/digiexam_lockdown_rapport.md).
+in the phase-1 report: [`../documentation/digiexam_lockdown_rapport.md`](../../documentation/digiexam_lockdown_rapport.md).
 
 ## 1. Component map
 
