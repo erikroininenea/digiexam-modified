@@ -1,0 +1,20 @@
+# Phase-3 publication policy — see ../documentation/legal-and-scope.md
+# and extraction/RECOVERY-STATUS.md.
+#
+# PUBLISHED (authorized for redistribution):
+#   manifests/                — factual metadata (asset path inventory, scan results)
+#   resources/fonts/          — third-party assets under redistributable licenses
+#                               (SIL OFL / MIT), with license texts
+#   (nothing else in this tree)
+#
+# PRESERVED LOCALLY ONLY — proprietary vendor content or trademarks:
+_blobs/
+frontend/
+reconstructed/
+resources/icons/
+
+# Rationale: the frontend bundle/CSS/HTML and beautified reconstructions are
+# DigiExam's proprietary code (minified build output — not original source);
+# icons are trademarks. All are fully documented by hash in
+# ../extraction/SHA256-MANIFEST.txt and reproducible from the signed binaries
+# via ../extraction/EXTRACTION-REPORT.md.
