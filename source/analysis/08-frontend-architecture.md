@@ -66,7 +66,7 @@ native gRPC** — both stacks coexist at different layers (review-resolved).
 **199 generated RPCs** across services: `assignment.service.v1.AssignmentService`
 (36 methods incl. `StandardLogin/LoginWithCode`, `GetActiveExams/GetExamDetails`,
 `StartOnlineExam/StartUSBExam`, `GetQuestions/GetAnswers`,
-`SaveTextualAnswer` (streaming) + `SaveTextualAnswerUnary`, `HandInExam`,
+`SaveTextualAnswer` (client-streaming) + `SaveTextualAnswerUnary`, `HandInExam`,
 `GenerateProctoringToken`, `CheckProctoringLicenses`, `Get/SetConnectivityStatus`,
 `RestoreExam`, `CreateLockdownSystemSnapshotUpload`), `iam.service.v1.IAMService`
 (Zitadel-style), `lockdown.service.v1.LockdownService`, `lis.service.v1.LearningIntegrationService`

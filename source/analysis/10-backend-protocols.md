@@ -23,12 +23,21 @@ official gRPC HTTP/2 protocol requires — fully-qualified `/package.Service/Met
 | Service / method | Evidence (digiexam.exe raw offset) |
 |---|---|
 | `lockdown.service.v1.LockdownService/GetLockdownConfig` | 0x01AF5F00 |
-| `lockdown.service.v1.LockdownService/{LockdownStart, LockdownStartWithDefinitions, LockdownStop, RollbackOperations}` | phase-1 (strings) |
 | `assignment.service.v1.AssignmentService/RefreshToken` | 0x01AF5DD8 |
-| `assignment.service.v1.AssignmentService/{SetConnectivityStatus, CheckDeprecation, SaveTextualAnswer, CreateLockdownSystemSnapshotUpload}` | strings cluster |
+| `assignment.service.v1.AssignmentService/{SetConnectivityStatus, CheckDeprecation, SaveTextualAnswer (client-streaming), CreateLockdownSystemSnapshotUpload}` | strings cluster |
 | `event.service.v1.EventService/StreamClientLog` | 0x01AE5108 |
 | `intserver.service.v1.IntServerService/Ping` | 0x01B2F0A8 |
 | `opentelemetry.proto.collector.{logs,trace}.v1.*Service/Export` | 0x020313C8 |
+
+**Correction (phase-3 schema reconstruction, see [`12-protobuf-schemas.md`](12-protobuf-schemas.md) §5):**
+`LockdownStart`, `LockdownStartWithDefinitions`, `LockdownStop` and
+`RollbackOperations` — listed in phase 1 as `LockdownService` methods — have **no
+method-path strings in any binary**; they are **native IPC commands**
+(`ExecutorIpcRequest` variants), not verified tonic RPCs. Only `GetLockdownConfig` is a
+verified tonic method of `LockdownService` on the Rust side. The frontend bundle,
+however, does define a `lockdown.service.v1.LockdownService` with 31 methods
+(connect-es descriptors) — the client-facing API surface is larger than the Rust-side
+tonic surface.
 
 Protobuf packages: `lockdown.{parameter,opplatform,opdefinition,lifecycle}.v1` — VERIFIED
 (strings_service.txt).
@@ -40,7 +49,8 @@ Protobuf packages: `lockdown.{parameter,opplatform,opdefinition,lifecycle}.v1` �
 - `assignment.service.v1.AssignmentService` — 36 methods: auth
   (`StandardLogin`, `LoginWithCode`, `RefreshToken`), exams (`GetActiveExams`,
   `GetExamDetails`, `StartOnlineExam`, `StartUSBExam`, `HandInExam`, `RestoreExam`),
-  Q&A (`GetQuestions`, `GetAnswers`, `SaveTextualAnswer` (server-streaming),
+  Q&A (`GetQuestions`, `GetAnswers`, `SaveTextualAnswer` (client-streaming —
+  corrected in [`12-protobuf-schemas.md`](12-protobuf-schemas.md) §5),
   `SaveTextualAnswerUnary`), proctoring (`GenerateProctoringToken`,
   `CheckProctoringLicenses`), connectivity (`Get/SetConnectivityStatus`),
   snapshot upload, file up/download.
